@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block start %}
+
+<div class="container">
+  <div class="sign_up">
+    <div class="sign_heading">
+      <h3>Create Your Account!!</h3>
+    </div>
+    <form action="">
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" class="form-control" id="name" aria-describedby="name" placeholder="Enter You Full Name">
+      </div>
+      <div class="form-group">
+        <label for="email">Email address</label>
+        <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter Your Email">
+      </div>
+      <div class="form-group">
+        <label for="Password">Password</label>
+        <input type="password" class="form-control" id="Password" aria-describedby="Password"
+          placeholder="Password">
+      </div>
+      <div class="form-group">
+        <label for="ConfirmPassword">Confirm Password</label>
+        <input type="password" class="form-control" id="ConfirmPassword" aria-describedby="PasswConfirmPasswordord"
+          placeholder="Confirm Password">
+      </div>
+      <div class="login_btn d-flex justify-content-between align-items-center">
+        <button type="submit" class="btn btn-primary my-3">Create an Account</button>
+        <span><a href="/login/">Already have Account!!</a></span>
+    </div>
+    </form>
+  </div>
+</div>
+
+{% endblock start %}

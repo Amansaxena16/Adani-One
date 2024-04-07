@@ -1,0 +1,23 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+.container .login {
+    width: 30%;
+}
+.container .login .login_heading h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0rem 1.5rem 0rem;
+    font-style: italic;
+    text-decoration: underline;
+}
+label {
+    font-weight: 400;
+    color: grey;
+}
+.container .login span {
+    color: rgb(113, 140, 244);
+    font-weight: 500;
+    
+}
+

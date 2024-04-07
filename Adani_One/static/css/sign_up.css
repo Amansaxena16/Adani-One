@@ -1,0 +1,13 @@
+.container .sign_up {
+    width: 40%;
+}
+.container .sign_up .sign_heading h3 {
+    font-size: 1.4rem;
+    margin: 1.5rem 0rem 1.5rem 0rem;
+    font-style: italic;
+    text-decoration: underline;
+}
+span{
+    color: rgb(113, 140, 244);
+    font-weight: 500;
+}
