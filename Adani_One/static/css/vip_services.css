@@ -1,0 +1,75 @@
+.vip_services {
+    background-color: #ffffff;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}   
+.vip_services .pranaam_img img {
+    width: 7rem;
+}
+.vip_services .booking_form .service_radio {
+    gap: 3rem;
+}
+label {
+    font-weight: bold;
+}
+select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path d="M8 10.293 1.354 3.646a.5.5 0 0 1 .708-.708L8 9.293l6.938-6.939a.5.5 0 1 1 .707.708l-7.5 7.5a.5.5 0 0 1-.707 0l-7.5-7.5a.5.5 0 1 1 .707-.708L8 10.293z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+select:focus {
+    outline: none;
+    border-color: #3498db;
+}
+.date-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    appearance: none;
+    background-color: #ffffff;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1 2.5A1.5 1.5 0 0 1 2.5 1h11A1.5 1.5 0 0 1 15 2.5v11a1.5 1.5 0 0 1-1.5 1.5H2.5A1.5 1.5 0 0 1 1 13.5v-11zm1.5-.5a.5.5 0 0 0-.5.5v11a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 .5-.5v-11a.5.5 0 0 0-.5-.5H2.5z"/><path fill-rule="evenodd" d="M0 4a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v1.083a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5V4z"/><path d="M13.5 6h-11a.5.5 0 0 1 0-1H3v-.5a.5.5 0 0 1 1 0V5h2v-.5a.5.5 0 0 1 1 0V5h3v-.5a.5.5 0 0 1 1 0V5h1.5a.5.5 0 0 1 0 1zM4 8h1v1H4a1 1 0 0 1-1-1V7h1v1zm3-1v1H6V7h1zm4 1H9V7h2v1zm-3 1h1v1H8a1 1 0 0 1-1-1V9h1v1zm3-1v1h-1V9h1zm-4 2H7V10h1v1z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 16px;
+}
+.date-input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+.origin-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+.guest-block h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+.guest-input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 16px;
+    color: #555;
+}
+.guest-input:focus {
+    outline: none;
+    border-color: #007bff;
+ }
+

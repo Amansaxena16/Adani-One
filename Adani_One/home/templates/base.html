@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <!-- Tailwind CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+    <!-- Font Awesome links -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Css File Links -->
+    {% load static%}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    <link rel="stylesheet" href="{% static 'css/index.css' %}">
+    <link rel="stylesheet" href="{% static 'css/vip_services.css' %}">
+    <title>{{page}}</title>
+</head>
+
+<body>
+
+    <!-- Navbar Starts From here -->
+    {% load static%}
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <img src="/static/img/AdaniOne_logo.png" alt="Logo">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class=" nav_services collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class=" left_nav navbar-nav mr-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Flights
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-secondary" href="#">Action</a>
+                        <a class="dropdown-item text-secondary" href="#">Another action</a>
+                        <a class="dropdown-item text-secondary" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-dark" href="#">Hotels <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Trains
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-secondary" href="#">Action</a>
+                        <a class="dropdown-item text-secondary" href="#">Another action</a>
+                        <a class="dropdown-item text-secondary" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Shop & Dine
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-secondary" href="#">Action</a>
+                        <a class="dropdown-item text-secondary" href="#">Another action</a>
+                        <a class="dropdown-item text-secondary" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle text-dark" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Services
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item text-secondary" href="#">Action</a>
+                        <a class="dropdown-item text-secondary" href="#">Another action</a>
+                        <a class="dropdown-item text-secondary" href="#">Something else here</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-dark" href="#">Adani Rewards</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link text-dark" href="#">Offers <span class="sr-only">(current)</span></a>
+                </li>
+            </ul>
+
+            <div class="right_nav d-flex">
+                <div class="search_nav">
+                    <a href="#"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-search" viewBox="0 0 16 16">
+                            <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
+                        </svg></a>
+                </div>
+                <div class="cart_nav">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-cart" viewBox="0 0 16 16">
+                            <path
+                                d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l1.313 7h8.17l1.313-7zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
+                        </svg>
+                    </a>
+                </div>
+                <div class="profile_nav">
+                    <a href="#">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                            class="bi bi-person" viewBox="0 0 16 16">
+                            <path
+                                d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Navbar End here  -->
+
+
+
+    {% block start %}
+
+
+
+    {% endblock start %}
+
+    <!-- Full Screen Image start from here  -->
+
+    <div class="container-fluid p-0 full-size-image">
+        <div class="full_screen_img">
+            <img class="img_fluid" loading="lazy" src="/static/img/HomePage-AdaniOne-Desktop.avif" alt="">
+        </div>
+    </div>
+
+    <!-- Full Screen Image End here  -->
+
+
+    <!-- Footer start from here  -->
+    <div class="container-fluid">
+        <footer class=" footer pt-5">
+            <div class="footer_row row d-flex justify-content-center">
+                <div class="footer_services col-2">
+                    <h5>Discover</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2 "><a href="#" class="nav-link p-0 text-muted">Flight Booking</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Holidays</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Trains</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Services</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Hotels</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Domestic Flights</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">International Flights</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Travel Insurance</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Travelogues</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Domestic Airlines</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">International Airlines</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Video Gallery</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Long Weekend Calendar</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer_services col-2">
+                    <h5>Company</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">About Us</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_services col-2">
+                    <h5>Adani Businesses</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ground Transportation</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Duty Free
+                            </a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Cargo</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Fuel Farm</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_services col-2">
+                    <h5>Airport Businesses</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Airports
+                            </a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Adani Total Gas
+                            </a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Adani Electricity</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Adani Wilmar</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Adani Realty
+                            </a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Adani Capital</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Adani Housing Finance</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="footer_services col-2">
+                    <h5>Help And Support</h5>
+                    <ul class="nav flex-column">
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Contact Us</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Feedback</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Track Refund Status</a>
+                        </li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Help Centre</a></li>
+                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">FAQs</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer_right _d-flex justify-content-between py-4 my-4 border-top">
+                    <p>© 2021 Company, Inc. All rights reserved.</p>
+                    <ul class="list-unstyled d-flex">
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#twitter"></use>
+                                </svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#instagram"></use>
+                                </svg></a></li>
+                        <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                                    <use xlink:href="#facebook"></use>
+                                </svg></a></li>
+                    </ul>
+                </div>
+        </footer>
+    </div>
+    <!-- Footer End here  -->
+</body>
+
+</html>

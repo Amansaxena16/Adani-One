@@ -1,0 +1,77 @@
+{% extends "base.html" %}
+{% block start %}
+
+<!-- // VIP Booking Services Section Start from here  -->
+<div class="container my-5">
+    <div class="vip_services d-flex flex-column align-items-center">
+        <div class="pranaam_img my-2">
+            <img src="/static/img/pranaamlogo.png" alt="">
+        </div>
+        <div class="booking_form">
+            <form action="">
+                <div class="service_radio d-flex my-3">
+                    <div class="action_controller">
+                        <input type="radio" autocomplete="off" id="" class="action_controller" value="departure">
+                        <label title="" for="departure" class="action_controller">Departure</label>
+                    </div>
+                    <div class="action_controller">
+                        <input type="radio" autocomplete="off" id="" class="action_controller" value="arrival">
+                        <label title="" for="arrival" class="action_controller">Arrival</label>
+                    </div>
+                    <div class="action_controller">
+                        <input type="radio" autocomplete="off" id="" class="action_controller" value="round_trip">
+                        <label title="" for="round_trip" class="action_controller">Round Trip</label>
+                    </div>
+                    <div class="action_controller">
+                        <input type="radio" autocomplete="off" id="" class="action_controller" value="transit">
+                        <label title="" for="transit" class="action_controller">Transit</label>
+                    </div>
+                </div>
+                <div class="services_box d-flex justify-content-between">
+                    <div class="form-group">
+                        <label for="travelSector">Travel Sector</label>
+                        <select id="travelSector" name="travelSector">
+                            <option value="" disabled selected>Select Travel Sector</option>
+                            <option value="domestic">Domestic</option>
+                            <option value="international">International</option>
+                        </select>
+                    </div>
+                    <div class="form-group mr-3">
+                        <label for="travelDate">Select Travel Date</label>
+                        <input type="date" id="travelDate" name="travelDate" class="date-input">
+                    </div>
+                </div>
+                <div class="services_box d-flex">
+                    <div class="form-group">
+                        <label for="originCity">Origin City</label>
+                        <input type="text" id="originCity" name="originCity" class="origin-input" placeholder="Enter origin city...">
+                    </div>
+                    <div class="form-group">
+                        <label for="DestinationCity">Destination City</label>
+                        <input type="text" id="DestinationCity" name="DestinationCity" class="origin-input" placeholder="Enter Destination City...">
+                    </div>
+                </div>
+                <div class="services_box d-flex">
+                    <div class="form-group">
+                        <label for="flight">Flight</label>
+                        <input type="text" id="flight" name="flight" class="origin-input" placeholder="Enter Flight city...">
+                    </div>
+                    <div class="form-group">
+                        <div class="guest-block">
+                            <label for="flight">Guests</label>
+                            <input type="number" class="guest-input" placeholder="Enter number of guests" min="1">
+                          </div>
+                    </div>
+                </div>
+                <div class="booking_btn">
+                    <button type="submit" class="btn btn-primary">Book Now</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- // VIP Booking Services Section end here  -->
+
+
+{% endblock start %}
