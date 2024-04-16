@@ -1,20 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-/* Navbar css start from here  */
-.navbar .navbar-brand {
-    margin: 0;
+* {
     padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    list-style-type: none;
+    text-decoration: none;
 }
-.navbar .navbar-brand img {
+
+/* navbar CSS start from here  */
+
+li {
+    list-style-type: none;
+
+}
+
+li a {
+    color: grey;
+    /* display: block; */
+}
+
+a {
+    color: grey;
+    font-family: "Poppins", sans-serif;
+    list-style-type: none;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 2rem;
+    position: sticky;
+    top: 0;
+    background-color: white;
+    height: 4rem;
+}
+
+.navbar .nav_logo a img {
     width: 7rem;
 }
-.navbar .nav_services .right_nav{
-    gap: 1.8rem;
+
+.navbar .nav_content {
+    display: block;
 }
-.navbar .nav_services .right_nav a {
-    color: inherit; 
-    text-decoration: none; 
+
+.navbar .nav_content .menu {
+    display: flex;
+    gap: 3rem;
 }
-/* navbar css end here  */
+
+.navbar .nav_icon {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.dropdown {
+    position: relative;
+}
+
+.dropdown_menu {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    z-index: 1;
+}
+
+.dropdown_menu li {
+    width: 15rem;
+    padding: 10px;
+}
+
+.dropdown:hover .dropdown_menu {
+    display: block;
+    height: 15rem;
+    overflow-y: scroll;
+    border-radius: 3px;
+    background-color: white;
+}
+
+.navbar .nav_icon .nav_hamburger {
+    display: none;
+}
+
+.navbar .nav_icon .nav_hamburger .fa-bars {
+    color: grey;
+}
+
+/* Navbar Media Query start from here  */
+
+@media screen and (max-width: 1100px) {
+    .navbar {
+        position: relative;
+    }
+
+    .navbar .nav_content {
+        display: none;
+        position: absolute;
+        left: 50%;
+        top: 3.5rem;
+    }
+
+    .navbar .nav_content .menu {
+        flex-direction: column;
+        position: absolute;
+        background-color: white;
+        width: 16rem;
+        text-align: center;
+        z-index: 3;
+    }
+
+    .nav_icon {
+        position: relative;
+    }
+
+    .navbar .nav_icon .nav_hamburger {
+        display: block;
+    }
+}
+
+/* Navbar CSS end here  */
+
 
 /* Full Screen Image Css start from here  */
 .full_screen_img {
@@ -28,14 +139,58 @@
 /* Full Screen Image Css end here  */
 
 
-/* footer start from here  */
-.footer .footer_row .footer_services h5 {
+/* footer CSS start from here  */
+.footer .footer_work {
+    display: flex;
+    justify-content: space-between;
+    margin: 0rem 7.8rem;
+}
+.footer .footer_work .foot_col_1 .col_heading span {
+    color: black;
+    font-weight: 500;
     font-size: 1rem;
 }
-.footer .footer_row .footer_services ul {
+.footer .footer_work .foot_col_1 .col_content{
+    display: block;
+    margin: 0.3rem 0rem;
+}
+.footer .footer_work .foot_col_1 .col_content ul li {
+    margin: 0.3rem 0rem;
+}
+.footer .footer_work .foot_col_1 .col_content ul li a {
+    text-decoration: none;
+    color: #6c757d;
     font-size: 0.8rem;
 }
-.footer .footer_row .footer_right p {
-    font-size: 0.8rem;
+.fa-chevron-circle-down {
+    display: none;
 }
-/* footer end here  */
+/* Footer Media Query Start from here  */
+@media screen and (max-width: 1000px){
+    .footer .footer_work {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1.5rem;
+    }
+}
+@media screen and (max-width: 600px){
+    .footer .footer_work {
+        display: grid;
+        grid-template-columns: 1fr ;
+        gap: 1.5rem;
+    }
+    .fa-chevron-circle-down {
+        font-size: 0.9rem;
+        margin-left: 0.4rem;
+        display: inline;
+    }
+    .footer .footer_work .foot_col_1 .col_content {
+        display: none;
+    }
+    .footer .footer_work .foot_col_1 .col_heading {
+        display: flex;
+        justify-content: space-between;
+    }
+}
+/* footer Media Query end here  */
+/* Fotter CSS end here  */

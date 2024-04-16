@@ -1,77 +1,126 @@
 {% extends "base.html" %}
 {% block start %}
-
-<!-- // VIP Booking Services Section Start from here  -->
-<div class="container my-5">
-    <div class="vip_services d-flex flex-column align-items-center">
-        <div class="pranaam_img my-2">
-            <img src="/static/img/pranaamlogo.png" alt="">
+]
+    <!-- Vip Form Start from here  -->
+    <section class="vip_form">
+        <div class="form_work">
+            <div class="form_image">
+                <img src="/static/img/pranaamlogo.png" alt="Pranaam">
+            </div>
+            <div class="form_content">
+                <form action="#">
+                    <div class="form_radio">
+                        <div class="departure">
+                            <input type="radio" class="" value="departure">
+                            <label for="departure">Departure</label>
+                        </div>
+                        <div class="arrival">
+                            <input type="radio" class="" value="arrival">
+                            <label for="arrival">Arrival</label>
+                        </div>
+                        <div class="round_trip">
+                            <input type="radio" class="" value="round_trip">
+                            <label for="round_trip">Round Trip</label>
+                        </div>
+                        <div class="transit">
+                            <input type="radio" class="" value="transit" id="transit">
+                            <label for="transit">Transit</label>
+                        </div>
+                    </div>
+                    <div class="form_search">
+                        <div class="travel">
+                            <label for="travel">Travel Sector</label><br>
+                            <select name="travel" id="travel">
+                                <option value="travel">Domestic</option>
+                                <option value="travel">International</option>
+                            </select>
+                        </div>
+                        <div class="date">
+                            <label for="date">Select Travel Date</label><br>
+                            <input type="date" class="search_change">
+                        </div>
+                        <div class="origin">
+                            <input type="text" class="search_change" placeholder="Origin">
+                        </div>
+                        <div class="destination">
+                            <input type="text" class="search_change" placeholder="Destination">
+                        </div>
+                        <div class="flights">
+                            <input type="text" class="search_change" placeholder="Flights">
+                        </div>
+                        <div class="guest">
+                            <input type="text" class="search_change" placeholder="Guests">
+                        </div>
+                        
+                    </div>
+                </form>
+                <div class="book_btn">
+                    <span>
+                        <a href="#">Book Now</a>
+                    </span>
+                </div>
+            </div>
         </div>
-        <div class="booking_form">
-            <form action="">
-                <div class="service_radio d-flex my-3">
-                    <div class="action_controller">
-                        <input type="radio" autocomplete="off" id="" class="action_controller" value="departure">
-                        <label title="" for="departure" class="action_controller">Departure</label>
-                    </div>
-                    <div class="action_controller">
-                        <input type="radio" autocomplete="off" id="" class="action_controller" value="arrival">
-                        <label title="" for="arrival" class="action_controller">Arrival</label>
-                    </div>
-                    <div class="action_controller">
-                        <input type="radio" autocomplete="off" id="" class="action_controller" value="round_trip">
-                        <label title="" for="round_trip" class="action_controller">Round Trip</label>
-                    </div>
-                    <div class="action_controller">
-                        <input type="radio" autocomplete="off" id="" class="action_controller" value="transit">
-                        <label title="" for="transit" class="action_controller">Transit</label>
-                    </div>
-                </div>
-                <div class="services_box d-flex justify-content-between">
-                    <div class="form-group">
-                        <label for="travelSector">Domestic</label>
-                        <select id="travelSector" name="travelSector">
-                            <option value="" disabled selected>Select Travel Sector</option>
-                            <option value="domestic">Domestic</option>
-                            <option value="international">International</option>
-                        </select>
-                    </div>
-                    <div class="form-group mr-3">
-                        <label for="travelDate">Select Travel Date</label>
-                        <input type="date" id="travelDate" name="travelDate" class="date-input">
-                    </div>
-                </div>
-                <div class="services_box d-flex">
-                    <div class="form-group">
-                        <label for="originCity">Origin City</label>
-                        <input type="text" id="originCity" name="originCity" class="origin-input" placeholder="Origin">
-                    </div>
-                    <div class="form-group">
-                        <label for="DestinationCity">Destination City</label>
-                        <input type="text" id="DestinationCity" name="DestinationCity" class="origin-input" placeholder="Destination">
-                    </div>
-                </div>
-                <div class="services_box d-flex">
-                    <div class="form-group">
-                        <label for="flight">Flight</label>
-                        <input type="text" id="flight" name="flight" class="origin-input" placeholder="Flight">
-                    </div>
-                    <div class="form-group">
-                        <div class="guest-block">
-                            <label for="flight">Guests</label>
-                            <input type="number" class="guest-input" placeholder="Guests" min="1">
-                          </div>
-                    </div>
-                </div>
-                <div class="booking_btn">
-                    <button type="submit" class="btn btn-primary">Book Now</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+    </section>
+    <!-- Vip Form End here  -->
 
-<!-- // VIP Booking Services Section end here  -->
+    <!-- Vip Recommeded Package code start from here  -->
+    <section class="Recommededpackage">
+        <div class="package_note">
+            <span>VIP Packages That Suits You <br> Best</span>
+        </div>
+        <div class="package">
+            <div class="elite_package">
+                <div class="elite_img">
+                    <img src="/static/img/Elite_Web.avif" alt="">
+                </div>
+                <div class="elite_description">
+                    <div class="elite_heading">
+                        <h4>Elite</h4>
+                    </div>
+                    <div class="elite_para">
+                        <p>Specially curated services for guests that gives them a world-class airport & travel experience</p>
+                    </div>
+                    <div class="price_book_btn">
+                        <div class="elite_price">
+                            <h4>₹2,750</h4>
+                            <span>Per Guest</span>
+                        </div>
+                        <div class="elite_book_btn">
+                            <span>
+                                <a href="#">Book Now</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="elite_package">
+                <div class="elite_img">
+                    <img src="/static/img/Platinum_web.avif" alt="">
+                </div>
+                <div class="elite_description">
+                    <div class="elite_heading">
+                        <h4>Platinum</h4>
+                    </div>
+                    <div class="elite_para">
+                        <p>Specially curated services for guests that gives them a world-class airport & travel experience</p>
+                    </div>
+                    <div class="price_book_btn">
+                        <div class="elite_price">
+                            <h4>₹1,540</h4>
+                            <span>Per Guest</span>
+                        </div>
+                        <div class="elite_book_btn">
+                            <span>
+                                <a href="#">Book Now</a>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Vip Recommeded package code end here  -->
 
 
 {% endblock start %}

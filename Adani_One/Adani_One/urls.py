@@ -24,4 +24,5 @@ urlpatterns = [
     path('vip_services/',vip_services, name='vip_services'),
     path('signup/',sign_up, name='sign_up'),
     path('login/',login, name='login'),
+    path('test/',test, name='test'),
 ]

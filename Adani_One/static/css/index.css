@@ -1,25 +1,80 @@
-/* services css start from here  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-.services .row .services_cart {
-    display: flex;
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
 }
-.services .row .services_cart .ser_box {
+
+/* Our Services Section CSS start from here  */
+.services {
+    margin: 0rem 8rem;
+}
+
+.services .services_heading {
+    margin: 1rem 0rem;
+}
+
+.services .services_row {
+    margin: 2.5rem 0rem;
+}
+
+.services .services_row .box .box_circle img {
+    width: 140px;
+    height: 140px;
+}
+
+.services .services_row {
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    justify-content: space-between;
+}
+.services .services_row .box a {
+    text-decoration: none;
+}
+.services .services_row .box .box_heading {
+    text-align: center;
+    margin-top: 0.6rem;
+}
+.services .services_row .box .box_heading span {
+    color: grey;
+    font-weight: 400;
+}
+.services .services_row .box .box_view {
+    width: 140px;
+    display: flex;
+    height: 140px;
+    background-color: rgb(243, 243, 243);
+    border-radius: 50%;
     justify-content: center;
+    align-items: center;
 }
-.services .row .services_cart .ser_box a {
-    color: inherit; 
-    text-decoration: none; 
-}
-.services .row .services_cart .ser_box a:hover {
-    color: inherit; 
-    text-decoration: none; 
-}
-.services .row .services_cart .view_box .fa-th-large {
-    font-size: 4rem;
-    color: rgb(243, 243, 243);
-}
-/* services css end here  */
 
+/* Services Media Query Start from here  */
+
+@media screen and (max-width: 1200px){
+    .services .services_row {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .services .services_row .box {
+        margin: 1rem 1rem;
+    }
+    .services .services_heading {
+        text-align: center;
+    }
+}
+@media screen and (max-width: 600px){
+    .services .services_row {
+        justify-content: center;
+    }
+    .services .services_row {
+        margin: 1rem 0rem;
+    }
+}
+
+/* Media Query End here  */
+
+/* Our Services Section CSS end here  */
