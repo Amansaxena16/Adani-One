@@ -1,30 +1,39 @@
 {% extends "base.html" %}
 {% block start %} 
 
-<!-- Login start from here -->
-<div class="container my-5">
-    <div class="login">
-        <div class="login_heading">
-            <h3>Login into your Account!!</h3>
+    <!-- Login section Code start from here  -->
+    <section class="login_section">
+        <div class="login">
+            <div class="login_heading">
+                <h3>Login into Your Account</h3>
+            </div>
+            <div class="login_place">
+                <form action="#">
+                    <div class="login_email login_input">
+                        <label for="email">Email Address</label>
+                        <input type="email" name="email" placeholder="Enter Email">
+                    </div>
+                    <div class="login_password login_input">
+                        <label for="password">Password</label>
+                        <input type="password" name="password" placeholder="Password">
+                    </div>
+                    <div class="forgot_pass">
+                        <span><a href="#">Forgot password?</a></span>
+                    </div>
+                    <div class="submit_account">
+                        <div class="submit_btn">
+                            <span>
+                                <a href="#">Submit</a>
+                            </span>
+                        </div>
+                        <div class="dont_have_account">
+                            <span><a href="#">Don't have Account!!</a></span>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
-        <form action="#">
-            <div class="form-group">
-                <label for="exampleInputEmail1">Email address</label>
-                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
-                </div>
-                <div class="form-group mb-2">
-                <label for="exampleInputPassword1">Password</label>
-                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                </div>
-                <span><a href="#">Forgot password?</a></span>
-                <br>
-                <div class="login_btn d-flex justify-content-between align-items-center">
-                    <button type="submit" class="btn btn-primary my-3">Submit</button>
-                    <span><a href="/signup/">Don't have Account!!</a></span>
-                </div>
-        </form>
-    </div>
-</div>
-<!-- login ends here -->
+    </section>
+    <!-- Login Section Code End here  -->
 
 {% endblock start %}
