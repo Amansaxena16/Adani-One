@@ -1,13 +1,83 @@
-.container .sign_up {
-    width: 40%;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    list-style-type: none;
+    text-decoration: none;
 }
-.container .sign_up .sign_heading h3 {
+
+/* sign up css section start from here  */
+
+.sign_up {
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0rem;
+}
+.sign_up .sigup_form .form_heading {
+    margin-bottom: 1.5rem;
+}
+.sign_up .sigup_form .form_heading h3 {
     font-size: 1.4rem;
-    margin: 1.5rem 0rem 1.5rem 0rem;
-    font-style: italic;
-    text-decoration: underline;
+    color: grey;
+    font-weight: 600;
 }
-span{
-    color: rgb(113, 140, 244);
-    font-weight: 500;
+.sign_up .sigup_form .form_detail .detail {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin: 0.8rem 0rem;
 }
+.sign_up .sigup_form .form_detail .detail label {
+    font-size: 1rem;
+    color: grey;
+    font-weight: 400;
+}
+.sign_up .sigup_form .form_detail .detail input {
+    width: 100%;
+    height: 2.3rem;
+    border-radius: 5px;
+    border: 1px solid grey;
+    padding-left: 5px;
+    font-size: 0.9rem;
+}
+.sign_up .sigup_form .form_detail .form_btn_already_acc {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin: 2rem 0rem;
+}
+.sign_up .sigup_form .form_detail .form_btn_already_acc .form_btn {
+    width: 11rem;
+    background-color: rgb(0, 106, 255);
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    border-radius: 6px;
+    align-items: center;
+}
+.sign_up .sigup_form .form_detail .form_btn_already_acc .form_btn .btn{
+    color: white;
+    padding: 0;
+}
+.sign_up .sigup_form .form_detail .form_btn_already_acc .alredy_acc span a {
+    color: grey;
+    font-size: 0.9rem;
+}
+@media screen and (max-width: 400px){
+    .sign_up .sigup_form {
+        width: 85%;
+    }
+    .sign_up .sigup_form .form_detail .form_btn_already_acc {
+        display: flex;
+        flex-direction: column;
+        gap: 0.6rem
+    }
+}
+/* sign up css section end here  */
+
+

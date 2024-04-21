@@ -7,7 +7,7 @@ const step_content = document.getElementsByClassName("Domestic_departure")
 
 for(let i = 0; i < 4; i++){
     step_content[i].style.display = "none"
-    step_content[0].style.display = "flex"
+    step_content[0].style.display = "grid"
     step_option[0].style.fontWeight = "600"
 
     step_option[i].onclick = function step_script(e){
@@ -24,7 +24,7 @@ for(let i = 0; i < 4; i++){
         
         if(class_option_name == step_content[i].classList[1])
         {
-            step_content[i].style.display = "flex"
+            step_content[i].style.display = "grid"
         }
     }
     
