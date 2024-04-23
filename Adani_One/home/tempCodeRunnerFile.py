@@ -1,1 +1,1 @@
-dc512e1702msh15a63aeb502abe8p140103jsn1296a692297c
+Fernet.generate_key()

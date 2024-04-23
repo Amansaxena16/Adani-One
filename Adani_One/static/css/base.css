@@ -79,8 +79,7 @@ a {
 
 .dropdown:hover .dropdown_menu {
     display: block;
-    height: 15rem;
-    overflow-y: scroll;
+    height: auto;
     border-radius: 3px;
     background-color: white;
 }
