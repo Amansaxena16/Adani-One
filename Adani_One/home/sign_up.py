@@ -29,20 +29,28 @@ def salting(password):
     with open("Key.key","rb") as f:
         key = f.read()
 
-    print(key)
+    print(type(key))
 
     # Create a Fernet instance with the key
     cipher_suite = Fernet(key)
 
     # Password to encrypt
     password = password
+    print("pass = ",type(password))
 
     # Encrypt the password
+    print(password.encode())
+    print(type(password.encode()))
     encrypted_password = cipher_suite.encrypt(password.encode())
     print("Encrypted Password:", encrypted_password)
+    print(type(encrypted_password))
 
     return encrypted_password
 
-    # # Decrypt the password
-    # decrypted_password = cipher_suite.decrypt(encrypted_password)
-    # print("Decrypted Password:", decrypted_password.decode())
+
+
+# def decrypted(password):
+#     pass
+#     # Decrypt the password
+#     decrypted_password = cipher_suite.decrypt(encrypted_password)
+#     print("Decrypted Password:", decrypted_password.decode())

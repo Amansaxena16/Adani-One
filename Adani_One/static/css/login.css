@@ -60,18 +60,19 @@
     gap: 4rem;
 }
 
-.login_section .login .login_place .submit_account .submit_btn {
+.login_section .login .login_place .submit_account .form_btn {
     width: 6rem;
-    height: 2.5rem;
-    border-radius: 6px;
     background-color: rgb(0, 106, 255);
+    height: 2.2rem;
     display: flex;
     justify-content: center;
+    border-radius: 6px;
     align-items: center;
 }
 
-.login_section .login .login_place .submit_account .submit_btn span a {
+.login_section .login .login_place .submit_account .form_btn .btn{
     color: white;
+    padding: 0;
 }
 
 .login_section .login .login_place .submit_account .dont_have_account span a {

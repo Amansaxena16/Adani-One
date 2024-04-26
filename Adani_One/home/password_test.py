@@ -1,6 +1,11 @@
 from cryptography.fernet import Fernet
 
-with open("Key.key","rb") as f:
+key = Fernet.generate_key()
+
+with open("Key.key","bw") as f:
+    f.write(key)
+
+with open("Adani_One/Key.key","rb") as f:
     key = f.read()
 
 print(key)
@@ -9,12 +14,13 @@ print(key)
 cipher_suite = Fernet(key)
 
 # Password to encrypt
-password = "aryanresidency"
+password = b'kanpurnanimation'
 
 # Encrypt the password
-encrypted_password = cipher_suite.encrypt(password.encode())
+encrypted_password = cipher_suite.encrypt(password)
 print("Encrypted Password:", encrypted_password)
 
 # Decrypt the password
 decrypted_password = cipher_suite.decrypt(encrypted_password)
-print("Decrypted Password:", decrypted_password.decode())
+message = decrypted_password.decode('utf-8')
+print("Decrypted Password:", message)

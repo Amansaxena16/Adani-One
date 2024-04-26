@@ -1,6 +1,13 @@
 from django.shortcuts import render
 from .models import SignUp
-from home.sign_up import restrict_character,check_password_length,salting
+from .sign_up import *
+from cryptography.fernet import Fernet, InvalidToken
+from django.core.mail import send_mail
+
+with open("Key.key","br") as f:
+    key = f.read()
+
+cipher_suite = Fernet(key)
 
 def index(request):
     context = {'page' : 'Adani One'}
@@ -42,6 +49,16 @@ def sign_up(request):
                 salted_passcode = salting(password)
                 signup_entry = SignUp(name=name, email=email, contact=contact, password=salted_passcode)
                 signup_entry.save()
+                
+                # Mail Comfirmation
+                send_mail(
+                'Successfully Registered',
+                'Hey Aman Saxena, You have been successfully registered in Adani World, Thank You',
+                'aman16glbajaj@gmail.com',
+                [email],
+                fail_silently=False,
+                )
+
                 return render(request,'success.html')
             else:
                 message = "Password is Improper, Should be between 8 - 20 Characters"
@@ -55,6 +72,28 @@ def sign_up(request):
     return render(request,'sign_up.html')
 
 def login(request):
+    if(request.method == 'POST'):
+        email = request.POST.get('email') 
+        password = request.POST.get('password') 
+
+        print(email,password)
+
+        user = SignUp.objects.values_list('name','email', 'password')
+        for i in user:
+            if(i[1] == email):
+                hash_pass = i[2][2:-1]
+                clean_hash_pass = hash_pass.encode()
+                decrypted_password = cipher_suite.decrypt(clean_hash_pass.decode())
+                clean_decrypted_pass = (str(decrypted_password))[2:-1]
+
+                if(password == clean_decrypted_pass):
+                    message = "You Have successfully Logged Inn"
+                    return render(request,'success.html',{'message' : message})
+                
+                else:
+                    message = "Incorrect Password"
+                    return render(request,'error.html',{'error_text' : message})
+
     return render(request,'login.html')
 
 def test(request):

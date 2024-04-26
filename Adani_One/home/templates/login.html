@@ -8,7 +8,8 @@
                 <h3>Login into Your Account</h3>
             </div>
             <div class="login_place">
-                <form action="#">
+                <form action="/login/" method="post">
+                    {% csrf_token %}
                     <div class="login_email login_input">
                         <label for="email">Email Address</label>
                         <input type="email" name="email" placeholder="Enter Email">
@@ -21,13 +22,11 @@
                         <span><a href="#">Forgot password?</a></span>
                     </div>
                     <div class="submit_account">
-                        <div class="submit_btn">
-                            <span>
-                                <a href="#">Submit</a>
-                            </span>
-                        </div>
+                        <div class="form_btn">
+                            <button type="submit" class="btn">Login</button>
+                          </div>
                         <div class="dont_have_account">
-                            <span><a href="#">Don't have Account!!</a></span>
+                            <span><a href="/signup/">Don't have Account!!</a></span>
                         </div>
                     </div>
                 </form>

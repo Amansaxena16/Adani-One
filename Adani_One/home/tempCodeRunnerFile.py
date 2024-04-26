@@ -1,1 +1,1 @@
-Fernet.generate_key()
+done
