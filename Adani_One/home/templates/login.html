@@ -12,18 +12,18 @@
                     {% csrf_token %}
                     <div class="login_email login_input">
                         <label for="email">Email Address</label>
-                        <input type="email" name="email" placeholder="Enter Email">
+                        <input type="email" name="email" id="email" placeholder="Enter Email">
                     </div>
                     <div class="login_password login_input">
                         <label for="password">Password</label>
-                        <input type="password" name="password" placeholder="Password">
+                        <input type="password" name="password" id="password" placeholder="Password">
                     </div>
                     <div class="forgot_pass">
                         <span><a href="#">Forgot password?</a></span>
                     </div>
                     <div class="submit_account">
                         <div class="form_btn">
-                            <button type="submit" class="btn">Login</button>
+                            <button type="submit" class="btn" id="btn">Login</button>
                           </div>
                         <div class="dont_have_account">
                             <span><a href="/signup/">Don't have Account!!</a></span>

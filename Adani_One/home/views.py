@@ -19,13 +19,14 @@ def vip_services(request):
 
 def sign_up(request):
     if(request.method == "POST"):
+        # fetching the data from user
         name = request.POST.get('name')     
         email = request.POST.get('email')     
         contact = request.POST.get('contact')     
         password = request.POST.get('password')     
         repassword = request.POST.get('repassword')
 
-        # Name Varification Code 
+        # Name Verification Code 
         restrict_character(name)
         if(restrict_character(name) == False):
             message = "Invalid Name"
@@ -73,19 +74,21 @@ def sign_up(request):
 
 def login(request):
     if(request.method == 'POST'):
+        # fatching the data from user
         email = request.POST.get('email') 
         password = request.POST.get('password') 
 
-        print(email,password)
-
+        # fetching the original data from database for validate
         user = SignUp.objects.values_list('name','email', 'password')
         for i in user:
             if(i[1] == email):
+                # slicing the key from the user
                 hash_pass = i[2][2:-1]
-                clean_hash_pass = hash_pass.encode()
-                decrypted_password = cipher_suite.decrypt(clean_hash_pass.decode())
+                clean_hash_pass = hash_pass.encode()  # encoding the key after the slicing
+                decrypted_password = cipher_suite.decrypt(clean_hash_pass.decode()) #decrypting the password
                 clean_decrypted_pass = (str(decrypted_password))[2:-1]
 
+                # Checking the original password with user entered password
                 if(password == clean_decrypted_pass):
                     message = "You Have successfully Logged Inn"
                     return render(request,'success.html',{'message' : message})
